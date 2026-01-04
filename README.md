@@ -12,13 +12,13 @@ wget -O /root/data/gpt2_local/merges.txt https://s3.amazonaws.com/models.hugging
 echo '{"model_type": "gpt2"}' > /root/data/gpt2_local/tokenizer_config.json<br>
 echo '{"model_type": "gpt2"}' > /root/data/gpt2_local/config.json<br><br>
 
-python tools/preprocess_data.py \<br>
---input /root/data/raw.jsonl \<br>
---output-prefix /root/data/my-gpt2 \<br>
---tokenizer-type HuggingFace Tokenizer \<br>
---tokenizer-model /root/data/gpt2_local \<br>
---append-eod \<br>
---workers 4 \<br>
+python tools/preprocess_data.py<br>
+--input /root/data/raw.jsonl<br>
+--output-prefix /root/data/my-gpt2<br>
+--tokenizer-type HuggingFace Tokenizer<br>
+--tokenizer-model /root/data/gpt2_local<br>
+--append-eod<br>
+--workers 4<br>
 --json-keys text<br><br>
 
 **文件说明**<br>
