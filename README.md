@@ -1,3 +1,9 @@
+**项目简介**<br>
+该项目为基于Megatron框架来对GPT2模型进行TP、PP的训练优化，对比通信墙、气泡实验、1F1B的实验结果<br>
+通信墙：run_step1_tp.sh<br>
+气泡实验：run_step2_pp_bubble.sh<br>
+1F1B：run_step3_pp_1f1b.sh<br><br><br>
+
 
 # 基于Megatron-LM的实战准备：<br>
 git clone https://github.com/NVIDIA/Megatron-LM.git<br>
@@ -9,6 +15,7 @@ for i in {1..10000}; do echo "{\"text\": \"Megatron-LM is the godfather of large
 **下载GPT-2 Tokenizer的字典和拼词规则**<br>
 wget -O /root/data/gpt2_local/vocab.json https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-vocab.json<br>
 wget -O /root/data/gpt2_local/merges.txt https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-merges.txt<br><br>
+**模拟生成关于GPT-2的tokenizer配置信息**<br>
 echo '{"model_type": "gpt2"}' > /root/data/gpt2_local/tokenizer_config.json<br>
 echo '{"model_type": "gpt2"}' > /root/data/gpt2_local/config.json<br><br>
 
